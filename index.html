@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="utility.css">
-    <title>Spotify</title>
+    <title>Spotify - Web Player: Music for everyone</title>
 </head>
 
 <body>
@@ -23,6 +23,10 @@
                 <div class="heading">
                     <img class="invert" src="playlist.svg" alt="">
                     <h2>Your Library</h2>
+                </div>
+                <div class="songList">
+                    <ul>    
+                    </ul>
                 </div>
                 <div class="footer">
                     <div><a href="https://www.spotify.com/pk-en/legal/" id=""><span>Legal</span></a></div>
@@ -43,14 +47,16 @@
             <div class="header">
                 <div class="nav">
                     <svg class="leftarrowbtn invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z" fill="grey" />
+                        <path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"
+                            fill="grey" />
                     </svg>
                     <svg class="rightarrowbtn invert" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" fill="grey" />
+                        <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"
+                            fill="grey" />
                     </svg>
                 </div>
                 <div class="buttons">
-                    <button class="signupbtn" >Sign up</button>
+                    <button class="signupbtn">Sign up</button>
                     <button class="loginbtn">Log in</button>
                 </div>
             </div>
@@ -68,62 +74,19 @@
                         <h2>Happy Hits!</h2>
                         <p>Hits to boost your mood and fill you with happiness!</p>
                     </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="#1fdf64" />
-                                <polygon points="40,30 70,50 40,70" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="#1fdf64" />
-                                <polygon points="40,30 70,50 40,70" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="#1fdf64" />
-                                <polygon points="40,30 70,50 40,70" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="#1fdf64" />
-                                <polygon points="40,30 70,50 40,70" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" fill="#1fdf64" />
-                                <polygon points="40,30 70,50 40,70" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67706f00000002b55b6074da1d43715fc16d6d" alt="">
-                        <h2>Happy Hits!</h2>
-                        <p>Hits to boost your mood and fill you with happiness!</p>
-                    </div>
+                </div>
+                <div class="playbar">
+                    <div class="songinfo">
 
+                    </div>
+                    <div class="songbuttons">
+                        <img src="previous.svg" alt="">
+                        <img src="play.svg" alt="">
+                        <img src="forward.svg" alt="">
+                    </div>
+                    <div class="songtime">
+
+                    </div>
                 </div>
             </div>
         </div>
