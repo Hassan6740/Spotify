@@ -1,4 +1,5 @@
 console.log("Lets write JavaScript");
+let currentSong = new Audio();
 
 async function getSongs() {
     let a = await fetch("http://127.0.0.1:3000/songs/")
@@ -11,10 +12,17 @@ async function getSongs() {
     for (let i = 0; i < as.length; i++) {
         const element = as[i]
         if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("/songs/")[1].split(".mp3")[0])
+            songs.push(element.href.split("/songs/")[1])
         }
     }
     return songs;
+}
+
+const playMusic = (track) => {
+    // let audio = new Audio("/songs/" + track);
+    currentSong.src = "/songs/" + track
+    currentSong.play();
+
 }
 
 async function main() {
@@ -22,8 +30,8 @@ async function main() {
     console.log(songs);
     let songUL = document.querySelector(".songList").getElementsByTagName("ul")[0]
     for (const song of songs) {
-        songUL.innerHTML = songUL.innerHTML + 
-        `<li>
+        songUL.innerHTML = songUL.innerHTML +
+            `<li>
             <img class="invert" src="music.svg" alt="">
             <div class="info">
                 <div>${song.replaceAll("%20", " ")}</div>
@@ -36,11 +44,14 @@ async function main() {
              
         </li>`;
     }
-    var audio = new Audio(songs[0])
-    // audio.play();
-
-    audio.addEventListener("loadeddata", () => {
-        console.log(audio.duration, audio.currentSrc, audio.currentTime);
-    });
+    Array.from(document.querySelector(".songList").getElementsByTagName("li")).forEach(e => {
+        e.addEventListener("click", element => {
+            console.log(e.querySelector(".info").firstElementChild.innerHTML);
+            playMusic(e.querySelector(".info").firstElementChild.innerHTML);
+        })
+    })
+    // audio.addEventListener("loadeddata", () => {
+    //     console.log(audio.duration, audio.currentSrc, audio.currentTime);
+    // });
 }
 main();
